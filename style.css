@@ -6,6 +6,8 @@
 body{
 	margin:0;
 	padding: 0;
+	box-sizing: border-box;
+	background-color: hsl(0, 0%, 98%);
 	font-family: 'Poppins', sans-serif;
 	font-weight: 200;
 	font-size:15px;
@@ -19,7 +21,7 @@ body{
 header{
 	width: 35vw;
 	margin: auto;
-	color: hsl(229, 6%, 66%);
+	color: hsl(234, 12%, 34%);
 }
 
 header h1{
@@ -29,7 +31,6 @@ header h1{
 
 header strong, article h1{
 	font-weight: 600;
-	color: hsl(234, 12%, 34%);
 }
 
 header p{
@@ -40,29 +41,39 @@ header p{
 
 main{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	column-gap:20px;
+	grid-template-columns: repeat(3 , 1fr);
 	grid-template-rows: repeat(4, 1fr);
-	/* grid-auto-rows: minmax(200px, auto); */
 }
 
 article{
 	display: grid;
+	padding:20px 20px 30px 20px;
+	border-radius: 1rem;
+	background-color: #fff;
 }
 
-article:nth-child(odd){
+#supervisor{
 	grid-row: 2/4;
+	border-top: 3px solid hsl(180, 62%, 55%);
 }
 
-article:nth-child(2){
+#team-builder{
 	grid-column-start: 2;
 	grid-row: 1/span 2;
+	border-top: 3px solid hsl(0, 78%, 62%);
 }
 
-article:nth-child(4){
+#karma{
 	grid-column-start: 2;
 	grid-row: 3/span 2;
+	border-top: 3px solid hsl(34, 97%, 64%);
 }
-
+#calculator{
+	grid-column-start: 3;
+	grid-row: 2/span 2;
+	border-top: 3px solid hsl(212, 86%, 64%);
+}
 
 article > img {
 	justify-self: end;
@@ -70,4 +81,15 @@ article > img {
 
 article p {
 	font-size: 12px;
+	margin: 5px 0 50px 0;
+}
+
+.i-calculator{
+	background: url("./images/icon-calculator.svg") no-repeat right bottom;
+	height: 64px
+}
+
+.i-karma{
+	background: url("./images/icon-karma.svg") no-repeat right bottom;
+	height: 64px;
 }
